@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "TONER “FRESH HERB”",
+      "price": 60,
+      "image": "assets/image_c5ef73b9.png"
+    },
+    {
+      "id": 2,
+      "name": "CREAM “FRESH HERB”",
+      "price": 50,
+      "image": "assets/image_3985e14b.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "SERUM “FRESH HERB”",
+      "price": 50,
+      "image": "assets/image_aa2ec270.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "SET “FRESH HERB”",
+      "price": 100,
+      "image": "assets/image_2d0c7102.jpeg"
+    }
+  ]
+  
