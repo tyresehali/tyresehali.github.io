@@ -1,0 +1,354 @@
+<!-- catalog.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Catalog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta name="x-apple-disable-message-reformatting">
+  <link rel="stylesheet" href="style-catalog.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script src="script.js"></script>
+<body>
+  <div data-ignore="used only for top most containter width">
+    <div class="main-content-container">
+      <div class="vertical-centered-layout">
+      <div class="header-container1">
+        <div class="vertical-image-gallery-container">
+          <a href="index.html">
+            <img src="assets/nacific.png" class="image-container" />
+          </a>
+        </div>
+        <div class="flex-box-container-with-sv-gs">
+          <div class="svg-container">
+            <img class="svg-container" src="icons/search.svg" alt="search">
+          </div>
+          <div class="svg-container">
+            <a href="reg-page.html"> 
+              <img class="svg-container" src="icons/profile.svg" alt="profile">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-container">
+        <div class="menu-container">
+          <!-- <p class="menu-title-text-style">MENU</p> -->
+          <!-- Кнопка -->
+          <div class="menu-title-text-style" onclick="toggleMenu()">
+            <img class="menu-icon" src="icons/menu.svg"> MENU
+          </div>
+        </div>
+        <div class="menu-container">
+          <div class="menu-title-text-style" onclick="toggleMenuCart()">
+            CART
+          </div>
+        </div>
+        <!-- Затемнение -->
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+        <!-- Боковое меню -->
+        <div class="side-menu" id="sideMenu">
+          <h2>CATALOG/</h2>
+          <a href="catalog.html">Skin care/</a>
+          <a href="catalog.html">Body / Hair /</a>
+          <a href="catalog.html">Make up/</a>
+          <h2>OTHER/</h2>
+          <a href="reg-page.html">Login/</a>
+          <a href="reg-page.html">Sign up/</a>
+          <a href="#">Cart/</a>
+          <a href="reg-page.html">My account/</a>
+        </div>
+
+        <!-- <div class="overlay" id="overlay-cart" onclick="toggleMenuCart()"></div>
+          <div class="side-menu-cart" id="sideMenuCart">
+            <h2>aaa/</h2>
+            <a href="catalog.html">aaa</a>
+            <a href="catalog.html">aaa</a>
+            <a href="catalog.html">Make up/</a>
+            <h2>OTHER/</h2>
+            <a href="reg-page.html">Login/</a>
+            <a href="reg-page.html">Sign up/</a>
+            <a href="#">Cart/</a>
+            <a href="reg-page.html">My account/</a>
+          </div> -->
+
+          <div class="overlay" id="overlay-cart" onclick="toggleMenuCart()"></div>
+            <div class="side-menu-cart" id="sideMenuCart">
+              <div class="cart-header">
+                <h2>CART (<span id="cart-count">0</span>)</h2>
+                <div class="cart-actions">
+                  <button class="cart-action-btn" onclick="clearCart()">CLEAN THE CART</button>
+                  <button class="cart-action-btn" onclick="toggleMenuCart()">CLOSE</button>
+                </div>
+              </div>
+              
+              <div class="cart-items" id="cart-items-container">
+                <!-- Товары будут добавляться сюда динамически -->
+              </div>
+              
+              <div class="cart-summary">
+                <div class="cart-summary-row">
+                  <span>QUANTITY</span>
+                  <span id="cart-total-quantity">0</span>
+                </div>
+                <div class="cart-summary-row">
+                  <span>TOTAL</span>
+                  <span id="cart-total-price">$0</span>
+                </div>
+                <a href="delivery.html">
+                  <button class="checkout-btn">GO TO DELIVERY</button>
+                </a>
+              </div>
+            </div>
+
+      </div>
+    </div>
+      <div class="product-details-container2">
+        <div class="product-details-container1">
+          <div class="product-card-container">
+            <div class="flex-column-container">
+              <div class="menu-container">
+                <div class="menu-title-text-style" onclick="history_back()">
+                  <img class="svg-container-with-text" src="icons/arrow-left.svg">
+                  BACK
+                </div>
+              </div>
+            </div>
+            <div class="filter-section">
+              <p class="filter-title-text-style">FILTERS</p>
+              <div class="button-group-container">
+                <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+                <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+                <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+                <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+                <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+                <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+              </div>
+            </div>
+            <div class="product-details-container">
+              <div class="skincare-product-card">
+                <div class="skincare-container">
+                  <p class="serum-title-style">SKIN CARE</p>
+                  <div class="svg-container">
+                    <img class="arrow-down-container" src="icons\arrow-down.svg">
+                  </div>
+                </div>
+                <div class="skincare-product-layout"> <!-- start -->
+                  <div class="product-info-container">
+                    <img class="svg-container" src="icons\tick.svg">
+                    <div class="header-text-widget">SET</div>
+                  </div>
+                  <div class="product-info-container">
+                    <img class="svg-container" src="icons\tick.svg">
+                    <div class="header-text-widget">CREAM</div>
+                  </div>
+                  <div class="product-info-container">
+                    <img class="svg-container" src="icons\tick.svg">
+                    <div class="header-text-widget">TONER</div>
+                  </div>
+                  <div class="product-info-container">
+                    <img class="svg-container" src="icons\tick.svg">
+                    <div class="header-text-widget">SERUM</div>
+                  </div>
+                </div> <!-- end -->
+              </div>
+            </div>
+            <div class="price-container2">
+              <div class="price-container">
+                <div class="price-box">
+                  <p class="price-heading-text-style">PRICE</p>
+                  <div class="price-container1">
+                    <div class="horizontal-box-with-text">
+                      <p class="zero-text-heading">FROM</p>
+                    </div>
+                    <div class="horizontal-box-with-text">
+                      <p class="zero-text-heading">TO</p>
+                    </div>
+                  </div>
+                </div>
+                <img src="assets/image_60c83eca.png" class="price-tag-container" />
+                
+              </div>
+            </div>
+            <div class="cart-button-container">
+              <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+              <a href="delivery.html">
+                <button class="cart-button">ADD TO CARD</button>
+              </a>
+              
+            </div>
+          </div>
+          <div class="product-info-container1">
+            <div class="product-description-container">
+              <div class="nature-energy-box">
+                <p class="mega-heading">PRODUCTS</p>
+                <div class="nature-energy-box1">
+                  <p class="brand-statement-text-style">About</p>
+                  <p class="nature-energy-styling">NACIFIC utilizes the energy of nature, comforts and<br />relieves the skin<br />as well as focusing on the applying impression</p>
+                </div>
+              </div>
+              <img src="assets/image_11e50122.png" class="product-image-container" />
+            </div>
+          </div>
+        </div>
+        <div class="product-listing-container">
+          <div class="center-content-with-image">
+            <div class="set-container">
+              <img src="assets/image_25a03abb.png" class="image-container1" />
+              <p class="mega-heading">SET</p>
+            </div>
+          </div>
+          <div class="product-card-container1">
+            <div class="product-card">
+              <img src="assets/image_3985e14b.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">CREAM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="assets/image_256c1ed6.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">CREAM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="assets/image_e13ee63a.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">CREAM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="assets/image_8bbf834e.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">CREAM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="toner-container">
+            <div class="toner-container1">
+              <img src="assets/image_98e27583.png" class="toner-image-container" />
+              <p class="mega-heading">TONER</p>
+            </div>
+          </div>
+          <div class="product-card-container1">
+            <div class="product-card">
+              <img src="assets/image_aa2ec270.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">SERUM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="assets/image_d04c4e6c.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">SERUM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="assets/image_ac363667.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">SERUM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="assets/image_4edebe91.jpeg" class="product-card-img" />
+              <div class="fresh-herb-product-card">
+                <p class="herb-price-list-item">SERUM “FRESH HERB”</p>
+                <p class="fresh-herb-price-text-style">$50</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vertical-margin-top">
+          <img src="assets/image_641fc7ed.jpeg" class="hero-image-container" />
+        </div>
+      </div>
+      <div class="vertical-centered-container">
+        <div class="center-aligned-content-container">
+          <div class="contact-menu-container">
+            <img src="assets/image_8f8bbfb1.png" class="image-container2" />
+            <div class="contact-menu-container1">
+              <div class="product-details-container2">
+                <p class="section-heading">CONTACT US</p>
+                <div class="email-section">
+                  <a class="fresh-herb-price-text-style" href="https://mail.google.com/mail/?view=cm&to=NACIFICOFICCIAL@GMAIL.COM" target="_blank">
+                      NACIFICOFICCIAL@GMAIL.COM
+                  </a>
+                  <p class="fresh-herb-price-text-style">HELP CENTER (INTERNATIONAL)</p>
+                  <p class="fresh-herb-price-text-style">WARRANTY</p>
+                  <p class="fresh-herb-price-text-style">+ 1 234 - 567 - 8910 (DPRK ONLY)</p>
+                </div>
+              </div>
+              <div class="product-details-container2">
+                <p class="section-heading">HELP</p>
+                <div class="email-section">
+                  <p class="fresh-herb-price-text-style">FAQ</p>
+                  <a class="fresh-herb-price-text-style" href="https://en.nacific.com/shopinfo/guide.html#change" target="_blank">
+                      SHIPPING &amp; RETURNS
+                  </a>
+                  <p class="fresh-herb-price-text-style">ORDER STATUS</p>
+                </div>
+              </div>
+              <div class="product-details-container2">
+                <p class="section-heading">ABOUT</p>
+                <div class="nacify-container">
+                  <a class="fresh-herb-price-text-style" href="https://nacific.com.au" target="_blank">
+                      WORLD OF NACIFIC
+                  </a>
+                  <a class="fresh-herb-price-text-style" href="https://nacific.com.au/pages/terms-conditions" target="_blank">
+                      TERMS OF SERVICE
+                  </a>
+                  <a class="fresh-herb-price-text-style" href="https://nacific.com.au/pages/privacy-policy" target="_blank">
+                      PRIVACY POLICY
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cosmetics-signup-container">
+            <p class="signup-message">SIGN UP TO BE THE FIRST TO SHOP NEW COSMETICS SETS</p>
+            <div class="product-details-container2">
+              <!-- PLACEHOLDER - Input Component detected here. Go to "React Code" via right click menu to see code generated -->
+            </div>
+            <p class="newsletter-text-styles">YOU MAY WITHDRAW YOUR CONSENT AT ANY TIME</p>
+          </div>
+        </div>
+        <div class="footer-copyright-section">
+          <p class="fresh-herb-price-text-style">Copyright © 2024 NACIFIC. All rights reserved.</p>
+          <div class="flex-container-with-heading">
+            <div class="flex-row-with-svg-icons">
+              <div class="svg-container">
+                <img href="https://www.instagram.com/nacific_official/" class="svg-container" src="icons/instagram.svg" alt="instagram">
+              </div>
+              <div class="svg-container">
+                <img class="svg-container" src="icons/facebook.svg" alt="facebook">
+              </div>
+              <div class="svg-container">
+                <img class="svg-container" src="icons/youtube.svg" alt="youtube">
+              </div>
+            </div>
+            <a id="go-up-button" class="go-up-btn" href="#">GO UP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

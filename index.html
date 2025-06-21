@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>NACIFIC</title>
+    <meta name="x-apple-disable-message-reformatting" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+<script src="script.js"></script>
+<body>
+  <div class="main-container" data-ignore="used only for top most containter width">
+    <div class="main-container">
+      <div class="vertical-centered-layout">
+        <div class="header-container1">
+          <div class="vertical-image-gallery-container">
+            <a href="index.html">
+              <img src="assets/nacific.png" class="image-container" />
+            </a>
+          </div>
+          <div class="flex-box-container-with-sv-gs">
+            <div class="svg-container">
+              <img class="svg-container" src="icons/search.svg" alt="search">
+            </div>
+            <div class="svg-container">
+                    <a href="reg-page.html"> 
+                        <img class="svg-container" src="icons/profile.svg" alt="profile">
+                    </a>
+                </div>
+          </div>
+        </div>
+        <div class="header-container">
+          <div class="menu-container">
+            <!-- <p class="menu-title-text-style">MENU</p> -->
+            <!-- Кнопка -->
+            <div class="menu-title-text-style" onclick="toggleMenu()">
+              <img class="menu-icon" src="icons/menu.svg"> MENU
+            </div>
+          </div>
+          <div class="menu-container">
+            <div class="menu-title-text-style" onclick="toggleMenuCart()">
+              CART
+            </div>
+          </div>
+          <!-- Затемнение -->
+          <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+          <!-- Боковое меню -->
+          <div class="side-menu" id="sideMenu">
+            <h2>CATALOG/</h2>
+            <a href="catalog.html">Skin care/</a>
+            <a href="catalog.html">Body / Hair /</a>
+            <a href="catalog.html">Make up/</a>
+            <h2>OTHER/</h2>
+            <a href="reg-page.html">Login/</a>
+            <a href="reg-page.html">Sign up/</a>
+            <a href="#">Cart/</a>
+            <a href="reg-page.html">My account/</a>
+          </div>
+
+          <!-- <div class="overlay" id="overlay-cart" onclick="toggleMenuCart()"></div>
+          <div class="side-menu-cart" id="sideMenuCart">
+            <h2>aaa/</h2>
+            <a href="catalog.html">aaa</a>
+            <a href="catalog.html">aaa</a>
+            <a href="catalog.html">Make up/</a>
+            <h2>OTHER/</h2>
+            <a href="reg-page.html">Login/</a>
+            <a href="reg-page.html">Sign up/</a>
+            <a href="#">Cart/</a>
+            <a href="reg-page.html">My account/</a>
+          </div> -->
+          
+          <div class="overlay" id="overlay-cart" onclick="toggleMenuCart()"></div>
+            <div class="side-menu-cart" id="sideMenuCart">
+              <div class="cart-header">
+                <h2>CART (0)</h2>
+                <div class="cart-actions">
+                  <button class="cart-action-btn" onclick="clearCart()">CLEAN THE CART</button>
+                  <button class="cart-action-btn" onclick="toggleMenuCart()">CLOSE</button>
+                </div>
+              </div>
+              
+              <div class="cart-items" id="cartItems">
+                <!-- Товары будут добавляться сюда динамически -->
+              </div>
+              
+              <div class="cart-summary">
+                <div class="cart-summary-row">
+                  <span>QUANTITY</span>
+                  <span id="cartQuantity">0</span>
+                </div>
+                <div class="cart-summary-row">
+                  <span>TOTAL</span>
+                  <span id="cartTotal">$0</span>
+                </div>
+                <a href="delivery.html">
+                  <button class="checkout-btn">GO TO DELIVERY</button>
+                </a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="main-content-container">
+        <div class="catalog-button-container">
+          <div class="catalog-button-container1">
+            <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+              <a href="catalog.html">
+                <button class="catalog-button">CATALOG</button>
+              </a>
+          </div>
+        </div>
+        <div class="product-details-container">
+          <div class="product-collection-section">
+            <div class="product-listing-container">
+              <div class="product-info-container">
+                <div class="horizontal-flex-container">
+                  FRESH HERB COLLECTION / NEW / FRESH HERB COLLECTION / NEW / FRESH HERB COLLECTION / NEW / FRESH HERB COLLECTION / NEW / FRESH HERB COLLECTION / NEW / FRESH HERB COLLECTION / NEW /
+                </div>
+                <p class="product-price-info">C</p>
+              </div>
+              <div class="product-card-list">
+                <div class="product-card-container">
+                  <img src="assets/image_c5ef73b9.png" class="product-card-img" />
+                  <div class="product-card">
+                    <p class="herb-price-display-style">TONER “FRESH HERB”</p>
+                    <p class="product-price-info">$60</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="product-card-container">
+                  <img src="assets/image_3985e14b.jpeg" class="product-card-img" />
+                  <div class="product-card">
+                    <p class="herb-price-display-style">CREAM “FRESH HERB”</p>
+                    <p class="product-price-info">$50</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="product-card-container">
+                  <img src="assets/image_aa2ec270.jpeg" class="product-card-img" />
+                  <div class="product-card">
+                    <p class="herb-price-display-style">SERUM “FRESH HERB”</p>
+                    <p class="product-price-info">$50</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="product-card-container">
+                  <img src="assets/image_2d0c7102.jpeg" class="product-card-img" />
+                  <div class="product-card">
+                    <p class="herb-price-display-style">SET “FRESH HERB”</p>
+                    <p class="product-price-info">$100</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="main-title-text-style">NACIFIC X STRAY KIDS</p>
+            <div class="ambassador-section">
+              <img src="assets/image_c60f5848.png" class="featured-image-container" />
+              <div class="ambassador-section1">
+                <p class="futuristic-text-block">The world-famous Strаy Kids group has collaborated with our future product, becoming the ambassador and face of the new collection.</p>
+                <div class="ambassador-section2">
+                  <img src="assets/image_22e0a525.png" class="image-container1" />
+                </div>
+              </div>
+            </div>
+            <div class="pre-order-section">
+              <div class="pre-order-section1">
+                <p class="hero-text">COMING SOON/</p>
+              </div>
+              <div class="images-container">
+                <img src="assets/image_633daf631.png" style="width: 800px; height: auto;" class="hero-image-container" />
+                <div class="image-text-wrapper">
+                  <img src="assets/image_d89459dc1.png" class="image-container-with-text" />
+                  <p class="neon-glow-text-style">NEW COLLECTION&nbsp; 2024<br />BRIGHTENING KIT x STRAY KIDS/</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-section">
+            <div class="center-aligned-content-container">
+              <div class="contact-menu-container1">
+                <img src="assets/nacific.png" class="hero-image-display-style" />
+                <div class="contact-menu-container">
+                  <div class="contact-info-block">
+                    <p class="section-title">CONTACT US</p>
+                    <div class="email-contact-section">
+                      <!-- <p class="product-price-info">NACIFICOFICCIAL@GMAIL.COM</p> -->
+                      <a class="product-price-info" href="https://mail.google.com/mail/?view=cm&to=NACIFICOFICCIAL@GMAIL.COM" target="_blank">
+                        NACIFICOFICCIAL@GMAIL.COM
+                      </a>
+                      <p class="product-price-info">HELP CENTER (INTERNATIONAL)</p>
+                      <p class="product-price-info">WARRANTY</p>
+                      <p class="product-price-info">+ 1 234 - 567 - 8910 (USA ONLY)</p>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <p class="section-title">HELP</p>
+                    <div class="email-contact-section">
+                      <p class="product-price-info">FAQ</p>
+                      <a class="product-price-info" href="https://en.nacific.com/shopinfo/guide.html#change" target="_blank">
+                        SHIPPING &amp; RETURNS
+                      </a>
+                      <p class="product-price-info">ORDER STATUS</p>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <p class="section-title">ABOUT</p>
+                    <div class="nacify-container">
+                      <!-- <p class="product-price-info">WORLD OF NACIFIC</p> -->
+                      <a class="product-price-info" href="https://nacific.com.au" target="_blank">
+                        WORLD OF NACIFIC
+                      </a>
+                      <!-- <p class="product-price-info">TERMS OF SERVICE</p> -->
+                      <a class="product-price-info" href="https://nacific.com.au/pages/terms-conditions" target="_blank">
+                        TERMS OF SERVICE
+                      </a>
+                      <!-- <p class="product-price-info">PRIVACY POLICY</p> -->
+                      <a class="product-price-info" href="https://nacific.com.au/pages/privacy-policy" target="_blank">
+                        PRIVACY POLICY
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="newsletter-signup-container">
+                <p class="newsletter-signup-text">SIGN UP TO BE THE FIRST TO SHOP NEW COSMETICS SETS</p>
+                <div class="vertical-spacer-container">
+                  <!-- PLACEHOLDER - Input Component detected here. Go to "React Code" via right click menu to see code generated -->
+                </div>
+                <p class="newsletter-signup-message">YOU MAY WITHDRAW YOUR CONSENT AT ANY TIME</p>
+              </div>
+            </div>
+            <div class="footer-copyright-section">
+              <p class="product-price-info">Copyright © 2025 NACIFIC. All rights reserved.</p>
+              <div class="flex-container-with-heading">
+                <div class="flex-container-with-sv-gs">
+                  <div class="svg-container">
+                  <img href="https://www.instagram.com/nacific_official/" class="svg-container" src="icons/instagram.svg" alt="instagram">
+                </div>
+                <div class="svg-container">
+                  <img class="svg-container" src="icons/facebook.svg" alt="facebook">
+                </div>
+                <div class="svg-container">
+                  <img class="svg-container" src="icons/youtube.svg" alt="youtube">
+                </div>
+              </div>
+              <a id="go-up-button" class="go-up-btn" href="#">GO UP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

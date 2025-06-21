@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta name="x-apple-disable-message-reformatting">
+  <link rel="stylesheet" href="style-delivery.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script src="script.js"></script>
+<body>
+  <div data-ignore="used only for top most containter width">
+    <div class="main-content-container">
+      <div class="vertical-centered-layout">
+      <div class="header-container1">
+        <div class="vertical-image-gallery-container">
+          <a href="index.html">
+            <img src="assets/nacific.png" class="image-container" />
+          </a>
+        </div>
+        <div class="flex-box-container-with-sv-gs">
+          <div class="svg-container">
+            <img class="svg-container" src="icons/search.svg" alt="search">
+          </div>
+          <div class="svg-container">
+            <a href="reg-page.html"> 
+              <img class="svg-container" src="icons/profile.svg" alt="profile">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header-container">
+        <div class="menu-container">
+          <!-- <p class="menu-title-text-style">MENU</p> -->
+          <!-- Кнопка -->
+          <div class="menu-title-text-style" onclick="toggleMenu()">
+            <img class="menu-icon" src="icons/menu.svg"> MENU
+          </div>
+        </div>
+        <div class="menu-container">
+          <div class="menu-title-text-style" onclick="toggleMenuCart()">
+            CART
+          </div>
+        </div>
+        <!-- Затемнение -->
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+        <!-- Боковое меню -->
+        <div class="side-menu" id="sideMenu">
+          <h2>CATALOG/</h2>
+          <a href="catalog.html">Skin care/</a>
+          <a href="catalog.html">Body / Hair /</a>
+          <a href="catalog.html">Make up/</a>
+          <h2>OTHER/</h2>
+          <a href="reg-page.html">Login/</a>
+          <a href="reg-page.html">Sign up/</a>
+          <a href="#">Cart/</a>
+          <a href="reg-page.html">My account/</a>
+        </div>
+
+        <!-- <div class="overlay" id="overlay-cart" onclick="toggleMenuCart()"></div>
+          <div class="side-menu-cart" id="sideMenuCart">
+            <h2>aaa/</h2>
+            <a href="catalog.html">aaa</a>
+            <a href="catalog.html">aaa</a>
+            <a href="catalog.html">Make up/</a>
+            <h2>OTHER/</h2>
+            <a href="reg-page.html">Login/</a>
+            <a href="reg-page.html">Sign up/</a>
+            <a href="#">Cart/</a>
+            <a href="reg-page.html">My account/</a>
+          </div>
+        </div> -->
+
+        <div class="overlay" id="overlay-cart" onclick="toggleMenuCart()"></div>
+            <div class="side-menu-cart" id="sideMenuCart">
+              <div class="cart-header">
+                <h2>CART (0)</h2>
+                <div class="cart-actions">
+                  <button class="cart-action-btn" onclick="clearCart()">CLEAN THE CART</button>
+                  <button class="cart-action-btn" onclick="toggleMenuCart()">CLOSE</button>
+                </div>
+              </div>
+              
+              <div class="cart-items" id="cartItems">
+                <!-- Товары будут добавляться сюда динамически -->
+              </div>
+              
+              <div class="cart-summary">
+                <div class="cart-summary-row">
+                  <span>QUANTITY</span>
+                  <span id="cartQuantity">0</span>
+                </div>
+                <div class="cart-summary-row">
+                  <span>TOTAL</span>
+                  <span id="cartTotal">$0</span>
+                </div>
+                <a href="delivery.html">
+                  <button class="checkout-btn">GO TO DELIEVERY</button>
+                </a>
+              </div>
+            </div>
+
+      </div>
+      <div class="delivery-container">
+        <div class="title-and-back">
+          <div class="back-button-container">
+            <div class="back-button" onclick="history_back()">
+              <img class="svg-container-with-text" src="icons/arrow-left.svg">
+              BACK
+            </div>
+          </div>
+          <div class="checkout-title">
+            CHECKOUT/
+          </div>
+        </div>
+        <div class="delivery-page-and-cart">
+          <div class="delivery-page-container">
+            <div class="product-name">
+              <div class="product-name-container">
+                <div class="product-name-text-style">
+                  TONER "PINK AHABHA"
+                </div>
+              </div>
+              <div>
+                <input type="text" name="name" placeholder="ENTER YOUR FULL NAME"/>
+              <div class="input-half">
+                <input class="input-class" type="text" name="name" placeholder="+7"/>
+                <input class="input-class" type="text" name="name" placeholder="EMAIL"/>
+              </div>
+              </div>
+            </div>
+            <div class="delivery-method-select-container">
+              <div class="product-name-container">
+                <div class="product-name-text-style">
+                  DELIVERY METHOD
+                </div>
+              </div>
+              <div>
+                <label>
+                    <input type="radio" name="option" value="option1"> COURIER
+                </label>
+                <label>
+                    <input type="radio" name="option" value="option2"> POST OFFICE
+                </label>
+              </div>
+            </div>
+            <div class="delivery-method-container">
+              <div class="product-name-container">
+                <div class="product-name-text-style">
+                  DELIVERY METHOD
+                </div>
+              </div>
+              <div>
+                <select>
+                  <option>COUNTRY</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <div>
+                <select>
+                  <option>CITY</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <div>
+                  <input type="text" name="name" placeholder="CITY"/>
+                <div class="input-half">
+                  <input type="text" name="name" placeholder="STREET"/>
+                  <input type="text" name="name" placeholder="APARTMENT"/>
+                  <input type="text" name="name" placeholder="FLOOR"/>
+                </div>
+                <input type="text" name="name" placeholder="COMMENT ON THE ORDER"/>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="payment-method-select">
+              <div class="product-name-container">
+                <div class="product-name-text-style">
+                  PAYMENT METHOD
+                </div>
+              </div>
+              <div>
+                <label>
+                    <input type="radio" name="option" value="option1"> BY CARD
+                </label>
+                <label>
+                    <input type="radio" name="option" value="option2"> CASH
+                </label>
+                <label>
+                    <input type="radio" name="option" value="option2"> ONLINE
+                </label>
+              </div>
+            </div> 
+          </div>
+          <div class="cart-items-container">
+            <div class="product-name">
+              <div class="product-name-text-style">
+                TONER "PINK AHABHA"
+              </div>
+              <input type="text" name="name"/>
+              <div>
+                <input type="text" name="name"/>
+                <input type="text" name="name"/>
+              </div>
+            </div>
+            <div class="delivery-method-select-container">
+              <div class="product-name-text-style">
+                DELIVERY METHOD
+              </div>
+              <div>
+                <label>
+                    <input type="radio" name="option" value="option1"> COURIER
+                </label>
+                <label>
+                    <input type="radio" name="option" value="option2"> POST OFFICE
+                </label>
+              </div>
+            </div>
+            <div class="delivery-method-container">
+              <div class="product-name-text-style">
+                DELIVERY METHOD
+              </div>
+              <div>
+                <select>
+                  <option>COUNTRY</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <div>
+                <select>
+                  <option>CITY</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <div>
+                  <input type="text" name="name"/>
+                <div>
+                  <input type="text" name="name"/>
+                  <input type="text" name="name"/>
+                  <input type="text" name="name"/>
+                </div>
+                <input type="text" name="name"/>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="payment-method-select">
+              <div class="product-name-text-style">
+                PAYMENT METHOD
+              </div>
+              <div>
+                <label>
+                    <input type="radio" name="option" value="option1"> BY CARD
+                </label>
+                <label>
+                    <input type="radio" name="option" value="option2"> CASH
+                </label>
+                <label>
+                    <input type="radio" name="option" value="option2"> ONLINE
+                </label>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div class="vertical-centered-container">
+        <div class="center-aligned-content-container">
+          <div class="contact-menu-container">
+            <img src="assets/image_8f8bbfb1.png" class="image-container2" />
+            <div class="contact-menu-container1">
+              <div class="product-details-container2">
+                <p class="section-heading">CONTACT US</p>
+                <div class="email-section">
+                  <a class="fresh-herb-price-text-style" href="https://mail.google.com/mail/?view=cm&to=NACIFICOFICCIAL@GMAIL.COM" target="_blank">
+                      NACIFICOFICCIAL@GMAIL.COM
+                  </a>
+                  <p class="fresh-herb-price-text-style">HELP CENTER (INTERNATIONAL)</p>
+                  <p class="fresh-herb-price-text-style">WARRANTY</p>
+                  <p class="fresh-herb-price-text-style">+ 1 234 - 567 - 8910 (DPRK ONLY)</p>
+                </div>
+              </div>
+              <div class="product-details-container2">
+                <p class="section-heading">HELP</p>
+                <div class="email-section">
+                  <p class="fresh-herb-price-text-style">FAQ</p>
+                  <a class="fresh-herb-price-text-style" href="https://en.nacific.com/shopinfo/guide.html#change" target="_blank">
+                      SHIPPING &amp; RETURNS
+                  </a>
+                  <p class="fresh-herb-price-text-style">ORDER STATUS</p>
+                </div>
+              </div>
+              <div class="product-details-container2">
+                <p class="section-heading">ABOUT</p>
+                <div class="nacify-container">
+                  <a class="fresh-herb-price-text-style" href="https://nacific.com.au" target="_blank">
+                      WORLD OF NACIFIC
+                  </a>
+                  <a class="fresh-herb-price-text-style" href="https://nacific.com.au/pages/terms-conditions" target="_blank">
+                      TERMS OF SERVICE
+                  </a>
+                  <a class="fresh-herb-price-text-style" href="https://nacific.com.au/pages/privacy-policy" target="_blank">
+                      PRIVACY POLICY
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cosmetics-signup-container">
+            <p class="signup-message">SIGN UP TO BE THE FIRST TO SHOP NEW COSMETICS SETS</p>
+            <div class="product-details-container2">
+              <!-- PLACEHOLDER - Input Component detected here. Go to "React Code" via right click menu to see code generated -->
+            </div>
+            <p class="newsletter-text-styles">YOU MAY WITHDRAW YOUR CONSENT AT ANY TIME</p>
+          </div>
+        </div>
+        <div class="footer-copyright-section">
+          <p class="fresh-herb-price-text-style">Copyright © 2024 NACIFIC. All rights reserved.</p>
+          <div class="flex-container-with-heading">
+            <div class="flex-row-with-svg-icons">
+              <div class="svg-container">
+                <img href="https://www.instagram.com/nacific_official/" class="svg-container" src="icons/instagram.svg" alt="instagram">
+              </div>
+              <div class="svg-container">
+                <img class="svg-container" src="icons/facebook.svg" alt="facebook">
+              </div>
+              <div class="svg-container">
+                <img class="svg-container" src="icons/youtube.svg" alt="youtube">
+              </div>
+            </div>
+            <a id="go-up-button" class="go-up-btn" href="#">GO UP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
